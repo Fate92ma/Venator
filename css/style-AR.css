@@ -1,0 +1,9 @@
+*,
+*::after,
+*::before {
+    font-family: 'Tahoma'
+}
+
+.tooltiptext {
+    right: 120%
+}
