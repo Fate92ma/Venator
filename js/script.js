@@ -47,8 +47,10 @@ $(document).ready(function () {
 
     // Smooth Scroll
 
-    $('.list li a').click(function () {
+    $('.list li a').click(function (event) {
 
+         event.preventDefault()
+        
         var sectionTo = $(this).attr('href');
 
         $('html, body').animate({
@@ -61,7 +63,7 @@ $(document).ready(function () {
 
     var swiper = new Swiper('.swiper-container', {
         autoplay: true,
-        interval: 800,
+        interval: 1000,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
@@ -71,9 +73,7 @@ $(document).ready(function () {
     // Numbers
 
     $(window).scroll(function () {
-
         if ($(this).scrollTop() >= 1375) {
-
             $('.timer').countTo({
                 onUpdate: true
             });
@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     // Contact
 
-    var placeAttr = "  "
+    var placeAttr = "  ";
 
     $("[placeholder]").focus(function () {
 
@@ -113,10 +113,6 @@ $(document).ready(function () {
     });
 
     // Language
-
-    $(".language i").on('click', function () {
-        $(".language").fadeOut()
-    });
 
     $(".language i").mouseenter(function () {
         $(".tooltiptext").fadeIn()

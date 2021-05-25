@@ -1,6 +1,4 @@
-*,
-*::after,
-*::before {
+body {
     font-family: 'Tahoma'
 }
 
